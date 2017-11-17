@@ -38,13 +38,11 @@ public class PackageMust {
         String lePrixAsText = laPremiereLigneDuTableau[5].toString();
         //Double lePrix = Double.parseDouble(lePoidsAsText);
 
-
-    // tu récupère ensuite la destination sous forme d'enum
-    // puis le prix en string
-
-        Package paquetAtester = new Package(laLongueur,laProfondeur,laLargeur,lePoids);
+        Package paquetAtester = new SmallPackage(laLongueur,laProfondeur,laLargeur,lePoids);
         double calculate = paquetAtester.calculateLocalShippingCost();
-        System.out.println(calculate);
+        java.text.DecimalFormat df = new java.text.DecimalFormat("0.00");
+        String nbArrondi = df.format(calculate);
+        System.out.print(nbArrondi);
 
         String expectedOutput = lePrixAsText ;
         assertThat(standardOutput(), containsString(expectedOutput));
@@ -66,15 +64,12 @@ public class PackageMust {
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
-        //Double lePrix = Double.parseDouble(lePoidsAsText);
 
-
-        // tu récupère ensuite la destination sous forme d'enum
-        // puis le prix en string
-
-        Package paquetAtester = new Package(laLongueur,laProfondeur,laLargeur,lePoids);
+        Package paquetAtester = new MediumPackage(laLongueur,laProfondeur,laLargeur,lePoids);
         double calculate = paquetAtester.calculateLocalShippingCost();
-        System.out.println(calculate);
+        java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
+        String nbArrondi = df.format(calculate);
+        System.out.println(nbArrondi);
 
         String expectedOutput = lePrixAsText ;
         assertThat(standardOutput(), containsString(expectedOutput));
@@ -97,15 +92,11 @@ public class PackageMust {
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
-        //Double lePrix = Double.parseDouble(lePoidsAsText);
-
-
-        // tu récupère ensuite la destination sous forme d'enum
-        // puis le prix en string
-
-        Package paquetAtester = new Package(laLongueur,laProfondeur,laLargeur,lePoids);
+        Package paquetAtester = new BigPackage(laLongueur,laProfondeur,laLargeur,lePoids);
         double calculate = paquetAtester.calculateLocalShippingCost();
-        System.out.println(calculate);
+        java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
+        String nbArrondi = df.format(calculate);
+        System.out.println(nbArrondi);
 
         String expectedOutput = lePrixAsText ;
         assertThat(standardOutput(), containsString(expectedOutput));
@@ -128,15 +119,12 @@ public class PackageMust {
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
-        //Double lePrix = Double.parseDouble(lePoidsAsText);
 
-
-        // tu récupère ensuite la destination sous forme d'enum
-        // puis le prix en string
-
-        Package paquetAtester = new Package(laLongueur,laProfondeur,laLargeur,lePoids);
+        Package paquetAtester = new BigPackage(laLongueur,laProfondeur,laLargeur,lePoids);
         double calculate = paquetAtester.calculateLocalShippingCost();
-        System.out.println(calculate);
+        java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
+        String nbArrondi = df.format(calculate);
+        System.out.println(nbArrondi);
 
         String expectedOutput = lePrixAsText ;
         assertThat(standardOutput(), containsString(expectedOutput));
@@ -159,15 +147,12 @@ public class PackageMust {
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
-        //Double lePrix = Double.parseDouble(lePoidsAsText);
 
-
-        // tu récupère ensuite la destination sous forme d'enum
-        // puis le prix en string
-
-        Package paquetAtester = new Package(laLongueur,laProfondeur,laLargeur,lePoids);
+        Package paquetAtester = new SmallPackage(laLongueur,laProfondeur,laLargeur,lePoids);
         double calculate = paquetAtester.calculateLocalShippingCost();
-        System.out.println(calculate);
+        java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
+        String nbArrondi = df.format(calculate);
+        System.out.println(nbArrondi);
 
         String expectedOutput = lePrixAsText ;
         assertThat(standardOutput(), containsString(expectedOutput));
@@ -190,15 +175,12 @@ public class PackageMust {
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
-        //Double lePrix = Double.parseDouble(lePoidsAsText);
 
-
-        // tu récupère ensuite la destination sous forme d'enum
-        // puis le prix en string
-
-        Package paquetAtester = new Package(laLongueur,laProfondeur,laLargeur,lePoids);
+        Package paquetAtester = new MediumPackage(laLongueur,laProfondeur,laLargeur,lePoids);
         double calculate = paquetAtester.calculateLocalShippingCost();
-        System.out.println(calculate);
+        java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
+        String nbArrondi = df.format(calculate);
+        System.out.println(nbArrondi);
 
         String expectedOutput = lePrixAsText ;
         assertThat(standardOutput(), containsString(expectedOutput));
@@ -221,15 +203,13 @@ public class PackageMust {
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
-        //Double lePrix = Double.parseDouble(lePoidsAsText);
 
 
-        // tu récupère ensuite la destination sous forme d'enum
-        // puis le prix en string
-
-        Package paquetAtester = new Package(laLongueur,laProfondeur,laLargeur,lePoids);
+        Package paquetAtester = new BigPackage(laLongueur,laProfondeur,laLargeur,lePoids);
         double calculate = paquetAtester.calculateLocalShippingCost();
-        System.out.println(calculate);
+        java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
+        String nbArrondi = df.format(calculate);
+        System.out.println(nbArrondi);
 
         String expectedOutput = lePrixAsText ;
         assertThat(standardOutput(), containsString(expectedOutput));
@@ -251,15 +231,12 @@ public class PackageMust {
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
-        //Double lePrix = Double.parseDouble(lePoidsAsText);
 
-
-        // tu récupère ensuite la destination sous forme d'enum
-        // puis le prix en string
-
-        Package paquetAtester = new Package(laLongueur,laProfondeur,laLargeur,lePoids);
+        Package paquetAtester = new BigPackage(laLongueur,laProfondeur,laLargeur,lePoids);
         double calculate = paquetAtester.calculateLocalShippingCost();
-        System.out.println(calculate);
+        java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
+        String nbArrondi = df.format(calculate);
+        System.out.println(nbArrondi);
 
         String expectedOutput = lePrixAsText ;
         assertThat(standardOutput(), containsString(expectedOutput));
