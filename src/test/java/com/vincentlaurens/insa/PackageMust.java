@@ -35,13 +35,15 @@ public class PackageMust {
         String lePoidsAsText = laPremiereLigneDuTableau[3].toString();
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
+        String laDestinationAsText = laPremiereLigneDuTableau[4].toString();
+        Destination laDestination= Destination.valueOf(laDestinationAsText);
+
         String lePrixAsText = laPremiereLigneDuTableau[5].toString();
-        //Double lePrix = Double.parseDouble(lePoidsAsText);
 
         PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
         ShippingCostsCalculator scc = new ShippingCostsCalculator();
-        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.FR);
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage, laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.00");
         String nbArrondi = df.format(calculate);
         System.out.print(nbArrondi);
@@ -65,12 +67,15 @@ public class PackageMust {
         String lePoidsAsText =  laPremiereLigneDuTableau[3].toString();
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
+        String laDestinationAsText = laPremiereLigneDuTableau[4].toString();
+        Destination laDestination= Destination.valueOf(laDestinationAsText);
+
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
         PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
         ShippingCostsCalculator scc = new ShippingCostsCalculator();
-        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.FR);
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
 
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
@@ -96,11 +101,14 @@ public class PackageMust {
         String lePoidsAsText =  laPremiereLigneDuTableau[3].toString();
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
+        String laDestinationAsText = laPremiereLigneDuTableau[4].toString();
+        Destination laDestination= Destination.valueOf(laDestinationAsText);
+
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
         PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
         ShippingCostsCalculator scc = new ShippingCostsCalculator();
-        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.FR);
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
         System.out.println(nbArrondi);
@@ -125,11 +133,16 @@ public class PackageMust {
         String lePoidsAsText =  laPremiereLigneDuTableau[3].toString();
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
+        String laDestinationAsText = laPremiereLigneDuTableau[4].toString();
+        Destination laDestination= Destination.valueOf(laDestinationAsText);
+
+
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
+
         PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
         ShippingCostsCalculator scc = new ShippingCostsCalculator();
-        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.FR);
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage, laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
         System.out.println(nbArrondi);
@@ -154,12 +167,15 @@ public class PackageMust {
         String lePoidsAsText =  laPremiereLigneDuTableau[3].toString();
         double lePoids = Double.parseDouble(lePoidsAsText);
 
+        String laDestinationAsText = laPremiereLigneDuTableau[4].toString();
+        Destination laDestination= Destination.valueOf(laDestinationAsText);
+
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
         PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
         ShippingCostsCalculator scc = new ShippingCostsCalculator();
-        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.MC);
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
         System.out.println(nbArrondi);
@@ -184,12 +200,15 @@ public class PackageMust {
         String lePoidsAsText =  laPremiereLigneDuTableau[3].toString();
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
+        String laDestinationAsText = laPremiereLigneDuTableau[4].toString();
+        Destination laDestination= Destination.valueOf(laDestinationAsText);
+
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
         PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
         ShippingCostsCalculator scc = new ShippingCostsCalculator();
-        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.MC);
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
         System.out.println(nbArrondi);
@@ -214,13 +233,16 @@ public class PackageMust {
         String lePoidsAsText =  laPremiereLigneDuTableau[3].toString();
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
+        String laDestinationAsText = laPremiereLigneDuTableau[4].toString();
+        Destination laDestination= Destination.valueOf(laDestinationAsText);
+
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
 
         PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
         ShippingCostsCalculator scc = new ShippingCostsCalculator();
-        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.MC);
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.00");
         String nbArrondi = df.format(calculate);
         System.out.println(nbArrondi);
@@ -244,12 +266,15 @@ public class PackageMust {
         String lePoidsAsText =  laPremiereLigneDuTableau[3].toString();
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
+        String laDestinationAsText = laPremiereLigneDuTableau[4].toString();
+        Destination laDestination= Destination.valueOf(laDestinationAsText);
+
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
         PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
         ShippingCostsCalculator scc = new ShippingCostsCalculator();
-        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.MC);
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
         System.out.println(nbArrondi);
@@ -257,8 +282,139 @@ public class PackageMust {
         String expectedOutput = lePrixAsText ;
         assertThat(standardOutput(), containsString(expectedOutput));
     }
+    @Test
+    public void neuviemeLigne(){
+        Object [ ] laPremiereLigneDuTableau = testParameters[8];
+
+        String laLongueurAsText = laPremiereLigneDuTableau[0].toString();
+        int laLongueur = Integer.parseInt(laLongueurAsText);
+
+        String laProfondeurAsText = laPremiereLigneDuTableau[2].toString();
+        int laProfondeur = Integer.parseInt(laProfondeurAsText);
+
+        String laLargeurAsText =  laPremiereLigneDuTableau[1].toString();
+        int laLargeur = Integer.parseInt(laLargeurAsText);
+
+        String lePoidsAsText =  laPremiereLigneDuTableau[3].toString();
+        Double lePoids = Double.parseDouble(lePoidsAsText);
+
+        String laDestinationAsText = laPremiereLigneDuTableau[4].toString();
+        String[] part = laDestinationAsText.split("/");
+        Destination laDestination= Destination.valueOf(part[0]+"_"+part[1]);
 
 
+        String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
+
+        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+
+        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
+        java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
+        String nbArrondi = df.format(calculate);
+        System.out.println(nbArrondi);
+
+        String expectedOutput = lePrixAsText ;
+        assertThat(standardOutput(), containsString(expectedOutput));
+    }
+    @Test
+    public void dixiemeLigne(){
+        Object [ ] laPremiereLigneDuTableau = testParameters[9];
+
+        String laLongueurAsText = laPremiereLigneDuTableau[0].toString();
+        int laLongueur = Integer.parseInt(laLongueurAsText);
+
+        String laProfondeurAsText = laPremiereLigneDuTableau[2].toString();
+        int laProfondeur = Integer.parseInt(laProfondeurAsText);
+
+        String laLargeurAsText =  laPremiereLigneDuTableau[1].toString();
+        int laLargeur = Integer.parseInt(laLargeurAsText);
+
+        String lePoidsAsText =  laPremiereLigneDuTableau[3].toString();
+        Double lePoids = Double.parseDouble(lePoidsAsText);
+
+        String laDestinationAsText = laPremiereLigneDuTableau[4].toString();
+        String[] part = laDestinationAsText.split("/");
+        Destination laDestination= Destination.valueOf(part[0]+"_"+part[1]);
+
+        String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
+
+        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+
+        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
+        java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
+        String nbArrondi = df.format(calculate);
+        System.out.println(nbArrondi);
+
+        String expectedOutput = lePrixAsText ;
+        assertThat(standardOutput(), containsString(expectedOutput));
+    }
+    @Test
+    public void onziemeLigne(){
+        Object [ ] laPremiereLigneDuTableau = testParameters[10];
+
+        String laLongueurAsText = laPremiereLigneDuTableau[0].toString();
+        int laLongueur = Integer.parseInt(laLongueurAsText);
+
+        String laProfondeurAsText = laPremiereLigneDuTableau[2].toString();
+        int laProfondeur = Integer.parseInt(laProfondeurAsText);
+
+        String laLargeurAsText =  laPremiereLigneDuTableau[1].toString();
+        int laLargeur = Integer.parseInt(laLargeurAsText);
+
+        String lePoidsAsText =  laPremiereLigneDuTableau[3].toString();
+        Double lePoids = Double.parseDouble(lePoidsAsText);
+
+        String laDestinationAsText = laPremiereLigneDuTableau[4].toString();
+        String[] part = laDestinationAsText.split("/");
+        Destination laDestination= Destination.valueOf(part[0]+"_"+part[1]);
+
+        String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
+
+        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+
+        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
+        java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
+        String nbArrondi = df.format(calculate);
+        System.out.println(nbArrondi);
+
+        String expectedOutput = lePrixAsText ;
+        assertThat(standardOutput(), containsString(expectedOutput));
+    }
+    @Test
+    public void douziemeLigne(){
+        Object [ ] laPremiereLigneDuTableau = testParameters[11];
+
+        String laLongueurAsText = laPremiereLigneDuTableau[0].toString();
+        int laLongueur = Integer.parseInt(laLongueurAsText);
+
+        String laProfondeurAsText = laPremiereLigneDuTableau[2].toString();
+        int laProfondeur = Integer.parseInt(laProfondeurAsText);
+
+        String laLargeurAsText =  laPremiereLigneDuTableau[1].toString();
+        int laLargeur = Integer.parseInt(laLargeurAsText);
+
+        String lePoidsAsText =  laPremiereLigneDuTableau[3].toString();
+        Double lePoids = Double.parseDouble(lePoidsAsText);
+
+        String laDestinationAsText = laPremiereLigneDuTableau[4].toString();
+        String[] part = laDestinationAsText.split("/");
+        Destination laDestination= Destination.valueOf(part[0]+"_"+part[1]);
+
+        String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
+
+        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+
+        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
+        java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
+        String nbArrondi = df.format(calculate);
+        System.out.println(nbArrondi);
+
+        String expectedOutput = lePrixAsText ;
+        assertThat(standardOutput(), containsString(expectedOutput));
+    }
     private String standardOutput(){
         return out.toString();
     }

@@ -11,6 +11,9 @@ public class ShippingCostsCalculator {
         if (destination == Destination.MC){
             tarif = monPackage.calculateLocalShippingCost() *1.087;
         }
+        if(destination == Destination.DOM_TOM){
+            tarif = (monPackage.calculateLocalShippingCost() * 1.054) + 1.26;
+        }
         return tarif;
     }
 }
