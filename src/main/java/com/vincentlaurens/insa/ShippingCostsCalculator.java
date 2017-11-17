@@ -2,15 +2,15 @@ package com.vincentlaurens.insa;
 
 public class ShippingCostsCalculator {
 
-   /* public double calculateShippingCost(Package monPackage, Destination destination){
-
+    public double calculateShippingCost(Package monPackage, Destination destination){
+        double tarif = 0;
         // Retourne les frais de port du package en fonction de la destination
         if(destination == Destination.FR){
-            //monPackage..calculateLocalShippingCost();
+            tarif = monPackage.calculateLocalShippingCost();
         }
         if (destination == Destination.MC){
-
+            tarif = monPackage.calculateLocalShippingCost() *1.087;
         }
-
-    }*/
+        return tarif;
+    }
 }

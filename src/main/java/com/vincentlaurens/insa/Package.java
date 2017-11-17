@@ -2,8 +2,6 @@ package com.vincentlaurens.insa;
 
 public abstract class Package {
 
-    protected static int DIMENSIONSGABARIT = 229*162*25;
-    protected static double poidsGabaritlimite = 1.800;
     protected static double prixPoidsGabarit = 17.59;
     protected static int prixDimensionGabarit =  12;
     protected static double frais_fixes = 2.86;
@@ -14,6 +12,7 @@ public abstract class Package {
     protected int height;
     protected int depth;
     protected int weight;
+    protected int volume;
     protected double poids;
 
 

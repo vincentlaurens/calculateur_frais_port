@@ -38,8 +38,10 @@ public class PackageMust {
         String lePrixAsText = laPremiereLigneDuTableau[5].toString();
         //Double lePrix = Double.parseDouble(lePoidsAsText);
 
-        Package paquetAtester = new SmallPackage(laLongueur,laProfondeur,laLargeur,lePoids);
-        double calculate = paquetAtester.calculateLocalShippingCost();
+        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+
+        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.FR);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.00");
         String nbArrondi = df.format(calculate);
         System.out.print(nbArrondi);
@@ -65,8 +67,11 @@ public class PackageMust {
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
-        Package paquetAtester = new MediumPackage(laLongueur,laProfondeur,laLargeur,lePoids);
-        double calculate = paquetAtester.calculateLocalShippingCost();
+        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+
+        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.FR);
+
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
         System.out.println(nbArrondi);
@@ -92,8 +97,10 @@ public class PackageMust {
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
-        Package paquetAtester = new BigPackage(laLongueur,laProfondeur,laLargeur,lePoids);
-        double calculate = paquetAtester.calculateLocalShippingCost();
+        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+
+        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.FR);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
         System.out.println(nbArrondi);
@@ -119,9 +126,10 @@ public class PackageMust {
         Double lePoids = Double.parseDouble(lePoidsAsText);
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
+        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
-        Package paquetAtester = new BigPackage(laLongueur,laProfondeur,laLargeur,lePoids);
-        double calculate = paquetAtester.calculateLocalShippingCost();
+        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.FR);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
         System.out.println(nbArrondi);
@@ -144,12 +152,14 @@ public class PackageMust {
         int laLargeur = Integer.parseInt(laLargeurAsText);
 
         String lePoidsAsText =  laPremiereLigneDuTableau[3].toString();
-        Double lePoids = Double.parseDouble(lePoidsAsText);
+        double lePoids = Double.parseDouble(lePoidsAsText);
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
-        Package paquetAtester = new SmallPackage(laLongueur,laProfondeur,laLargeur,lePoids);
-        double calculate = paquetAtester.calculateLocalShippingCost();
+        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+
+        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.MC);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
         System.out.println(nbArrondi);
@@ -176,8 +186,10 @@ public class PackageMust {
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
-        Package paquetAtester = new MediumPackage(laLongueur,laProfondeur,laLargeur,lePoids);
-        double calculate = paquetAtester.calculateLocalShippingCost();
+        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+
+        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.MC);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
         System.out.println(nbArrondi);
@@ -205,9 +217,11 @@ public class PackageMust {
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
 
-        Package paquetAtester = new BigPackage(laLongueur,laProfondeur,laLargeur,lePoids);
-        double calculate = paquetAtester.calculateLocalShippingCost();
-        java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
+        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+
+        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.MC);
+        java.text.DecimalFormat df = new java.text.DecimalFormat("0.00");
         String nbArrondi = df.format(calculate);
         System.out.println(nbArrondi);
 
@@ -232,8 +246,10 @@ public class PackageMust {
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
-        Package paquetAtester = new BigPackage(laLongueur,laProfondeur,laLargeur,lePoids);
-        double calculate = paquetAtester.calculateLocalShippingCost();
+        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+
+        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        double calculate = scc.calculateShippingCost(paquetAtester.monPackage,Destination.MC);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
         System.out.println(nbArrondi);

@@ -2,20 +2,15 @@ package com.vincentlaurens.insa;
 
 public class BigPackage extends Package {
 
-    public BigPackage (int height, int depth, int weight, double poids){
-        this.height = height;
-        this.depth = depth;
-        this.weight = weight;
-        this.poids = poids;
-    }
 
-    private double calcul_Volume(){
-        return (this.height*this.depth*this.weight);
+    public BigPackage (int volume, double poids){
+        this.volume = volume;
+        this.poids = poids;
     }
 
     @Override
     public double calculateLocalShippingCost(){
-        double volume_dm = (this.calcul_Volume()/1000000);
+        double volume_dm = (double) this.volume/1000000;
         double tarif_Volume = volume_dm * prixdmCube;
         double tarif_Poids = this.poids * prixKg;
         double tarif;
