@@ -2,6 +2,9 @@ package com.vincentlaurens.insa;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.Spy;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -13,11 +16,16 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class PackageMust {
     private ByteArrayOutputStream out;
+    @Mock
+    PackageFactory paquetAtester;
+    @Spy
+    ShippingCostsCalculator scc;
 
     @Before
     public void setUp(){
         out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
+        MockitoAnnotations.initMocks(this);
     }
     @Test
     public void premiereLigne(){
@@ -38,11 +46,13 @@ public class PackageMust {
         String laDestinationAsText = laPremiereLigneDuTableau[4].toString();
         Destination laDestination= Destination.valueOf(laDestinationAsText);
 
-        String lePrixAsText = laPremiereLigneDuTableau[5].toString();
+        String lePrixAsText = laPremiereLigneDuTableau[5].toString();;
 
-        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
-        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+
+
+        scc = new ShippingCostsCalculator();
         double calculate = scc.calculateShippingCost(paquetAtester.monPackage, laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.00");
         String nbArrondi = df.format(calculate);
@@ -72,9 +82,9 @@ public class PackageMust {
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
-        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+        paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
-        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        scc = new ShippingCostsCalculator();
         double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
 
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
@@ -105,9 +115,9 @@ public class PackageMust {
         Destination laDestination= Destination.valueOf(laDestinationAsText);
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
-        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+        paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
-        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        scc = new ShippingCostsCalculator();
         double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
@@ -139,9 +149,9 @@ public class PackageMust {
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
-        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+        paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
-        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        scc = new ShippingCostsCalculator();
         double calculate = scc.calculateShippingCost(paquetAtester.monPackage, laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
@@ -172,9 +182,9 @@ public class PackageMust {
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
-        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+        paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
-        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        scc = new ShippingCostsCalculator();
         double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
@@ -205,9 +215,9 @@ public class PackageMust {
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
-        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+        paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
-        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        scc = new ShippingCostsCalculator();
         double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
@@ -239,9 +249,9 @@ public class PackageMust {
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
 
-        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+        paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
-        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        scc = new ShippingCostsCalculator();
         double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.00");
         String nbArrondi = df.format(calculate);
@@ -271,9 +281,9 @@ public class PackageMust {
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
-        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+        paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
-        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        scc  = new ShippingCostsCalculator();
         double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
@@ -305,9 +315,9 @@ public class PackageMust {
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
-        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+        paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
-        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        scc = new ShippingCostsCalculator();
         double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
@@ -338,9 +348,9 @@ public class PackageMust {
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
-        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+        paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
-        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        scc = new ShippingCostsCalculator();
         double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
@@ -371,9 +381,9 @@ public class PackageMust {
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
-        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+        paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
-        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        scc = new ShippingCostsCalculator();
         double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
@@ -404,9 +414,9 @@ public class PackageMust {
 
         String lePrixAsText =  laPremiereLigneDuTableau[5].toString();
 
-        PackageFactory paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
+        paquetAtester = new PackageFactory(laLongueur,laProfondeur,laLargeur,lePoids);
 
-        ShippingCostsCalculator scc = new ShippingCostsCalculator();
+        scc = new ShippingCostsCalculator();
         double calculate = scc.calculateShippingCost(paquetAtester.monPackage,laDestination);
         java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
         String nbArrondi = df.format(calculate);
